@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediksi Kelulusan Siswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h2>EduML</h2>
+
+        <ul>
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#simulasi">Simulasi</a></li>
+            <li><a href="#algoritma">Algoritma</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <h1>Sistem Prediksi Kelulusan Siswa</h1>
+        <p>
+            Simulasi sederhana algoritma
+            <b>Decision Tree</b>
+            untuk memprediksi kelulusan siswa
+        </p>
+
+        <a href="#simulasi">
+            <button>Coba Simulasi</button>
+        </a>
+    </section>
+
+    <!-- Penjelasan -->
+    <section class="penjelasan">
+
+        <div class="card">
+            <h3>Machine Learning</h3>
+            <p>
+                Komputer belajar dari data
+                untuk membuat prediksi.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Decision Tree</h3>
+            <p>
+                Algoritma berbentuk pohon keputusan.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Prediksi</h3>
+            <p>
+                Menentukan siswa lulus atau tidak.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- Simulasi -->
+    <section id="simulasi">
+
+        <h2>Simulasi Prediksi</h2>
+
+        <div class="box">
+
+            <!-- Input -->
+            <div class="input-box">
+
+                <label>
+                    Nilai Tugas :
+                    <span id="nilaiTugas">75</span>
+                </label>
+                <input
+                    type="range"
+                    id="tugas"
+                    min="0"
+                    max="100"
+                    value="75"
+                    oninput="ubahNilai()"
+                >
+
+                <label>
+                    Nilai Ujian :
+                    <span id="nilaiUjian">70</span>
+                </label>
+                <input
+                    type="range"
+                    id="ujian"
+                    min="0"
+                    max="100"
+                    value="70"
+                    oninput="ubahNilai()"
+                >
+
+                <label>
+                    Kehadiran :
+                    <span id="nilaiHadir">80</span>%
+                </label>
+                <input
+                    type="range"
+                    id="hadir"
+                    min="0"
+                    max="100"
+                    value="80"
+                    oninput="ubahNilai()"
+                >
+
+                <label>
+                    Keaktifan :
+                    <span id="nilaiAktif">70</span>
+                </label>
+                <input
+                    type="range"
+                    id="aktif"
+                    min="0"
+                    max="100"
+                    value="70"
+                    oninput="ubahNilai()"
+                >
+
+                <button onclick="prediksi()">
+                    Proses Prediksi
+                </button>
+
+            </div>
+
+            <!-- Hasil -->
+            <div class="hasil-box">
+
+                <div id="hasil"></div>
+
+                <h3>Skor</h3>
+                <div id="score"></div>
+
+                <h3>Langkah Decision Tree</h3>
+                <div id="langkah"></div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Algoritma -->
+    <section id="algoritma">
+
+        <h2>Penjelasan Algoritma</h2>
+
+        <div class="card">
+            <h3>Machine Learning</h3>
+            <p>
+                Machine Learning adalah teknologi
+                yang membuat komputer belajar dari data.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Decision Tree</h3>
+            <p>
+                Decision Tree bekerja seperti
+                pohon keputusan.
+            </p>
+
+            <ul>
+                <li>Ujian ≥ 60 ?</li>
+                <li>Tugas ≥ 60 ?</li>
+                <li>Kehadiran ≥ 75 ?</li>
+                <li>Lulus / Remedial</li>
+            </ul>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>EduML - MID TEST Kecerdasan Buatan</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
